@@ -227,21 +227,19 @@
             layers = <LR_MAIN_EN LR_MAIN_RU>; 
             bindings = <&EN_RU>;
         };
-        // LR_SERVICE. Left half: top left (Esc) + all left thumb
+        // LR_SERV. Left half: top left (Esc) + all left thumb
         to_serv_left {
             timeout-ms = <100>;
             key-positions = <22 52 69 70>;
             layers = <LR_MAIN_EN LR_MAIN_RU>; 
-            bindings = <&SRVC_TEST>;
-            // bindings = <&to LR_SERV>;
+            bindings = <&to LR_SERV>;
         };
-        // LR_SERVICE. Right half: top right (rus 'Х') + all right thumb
+        // LR_SERV. Right half: top right (rus 'Х') + all right thumb
         to_serv_right {
             timeout-ms = <100>;
             key-positions = <33 57 73 74>;
             layers = <LR_MAIN_EN LR_MAIN_RU>; 
-            bindings = <&SRVC_TEST>;
-            // bindings = <&to LR_SERV>;
+            bindings = <&to LR_SERV>;
         };
     };
 
@@ -323,7 +321,7 @@
             >;
         };
 
-        LR_SERVICE {
+        LR_SERV {
             bindings = <
                 &none            &none   &none   &none   &none                                                                                        &none   &none   &none   &none          &none
                 &none            &none   &none   &none   &none   &none                                                                  &none         &none   &none   &none   &none          &none
