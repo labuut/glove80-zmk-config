@@ -214,7 +214,11 @@
         };        
     };
 
-    combos { // indexes start from 0
+    combos {
+        /*
+            Indexes start from 0. 
+            Indexes by first switch in rows: 0, 10, 22, 34, 46, 64.
+        */
         compatible = "zmk,combos";
         // EN/RU layout: K + L
         switch_lang_new {
@@ -228,14 +232,16 @@
             timeout-ms = <100>;
             key-positions = <22 52 69 70>;
             layers = <LR_MAIN_EN LR_MAIN_RU>; 
-            bindings = <&mo LR_SERV>;
+            bindings = <&SRVC_TEST>;
+            // bindings = <&to LR_SERV>;
         };
         // LR_SERVICE. Right half: top right (rus 'Х') + all right thumb
         to_serv_right {
             timeout-ms = <100>;
             key-positions = <33 57 73 74>;
             layers = <LR_MAIN_EN LR_MAIN_RU>; 
-            bindings = <&to LR_SERV>;
+            bindings = <&SRVC_TEST>;
+            // bindings = <&to LR_SERV>;
         };
     };
 
