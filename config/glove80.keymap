@@ -202,6 +202,16 @@
                 <&kp LS(N3)>,
                 <&LAYOUT_EN>;
         };
+
+        SRVC_TEST: SRVC_TEST {
+            label = "ZM_SRVC_TEST";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <30>;
+            bindings =
+                <&kp S>,<&kp E>,<&kp R>,<&kp V>,<&kp I>,<&kp C>,<&kp E>;
+        };        
     };
 
     combos { // indexes start from 0
@@ -225,7 +235,7 @@
             timeout-ms = <100>;
             key-positions = <33 57 73 74>;
             layers = <LR_MAIN_EN LR_MAIN_RU>; 
-            bindings = <&mo LR_SERV>;
+            bindings = <&to LR_SERV>;
         };
     };
 
@@ -309,12 +319,12 @@
 
         LR_SERVICE {
             bindings = <
-                &none   &none   &none   &none   &none                                                                                        &none   &none   &none   &none          &none
-                &none   &none   &none   &none   &none   &none                                                                  &none         &none   &none   &none   &none          &none
-                &none   &none   &none   &none   &none   &bootloader                                                            &bootloader   &none   &none   &none   &none          &bt BT_CLR
-                &none   &none   &none   &none   &none   &sys_reset                                                             &sys_reset    &none   &none   &none   &none          &none
-                &none   &none   &none   &none   &none   &none         &trans   &trans   &trans      &trans   &trans   &trans   &none         &bt_0   &bt_1   &bt_2   &out OUT_USB   &none
-                &none   &none   &none   &none   &none                 &trans   &trans   &trans      &trans   &trans   &trans                 &none   &none   &none   &none          &none
+                &none            &none   &none   &none   &none                                                                                        &none   &none   &none   &none          &none
+                &none            &none   &none   &none   &none   &none                                                                  &none         &none   &none   &none   &none          &none
+                &to LR_MAIN_EN   &none   &none   &none   &none   &bootloader                                                            &bootloader   &none   &none   &none   &none          &to LR_MAIN_EN
+                &none            &none   &none   &none   &none   &sys_reset                                                             &sys_reset    &none   &none   &none   &none          &none
+                &none            &none   &none   &none   &none   &SRVC_TEST    &trans   &trans   &trans      &trans   &trans   &trans   &SRVC_TEST    &bt_0   &bt_1   &bt_2   &out OUT_USB   &bt BT_CLR
+                &none            &none   &none   &none   &none                 &trans   &trans   &trans      &trans   &trans   &trans                 &none   &none   &none   &none          &none
             >;
         };
     };
