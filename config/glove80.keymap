@@ -268,12 +268,12 @@
 
         LR_MAIN_RU {
             bindings = <
-                &trans   &trans   &trans   &trans   &trans                                                                                    &trans        &trans      &trans    &trans      &trans
-                &trans   &trans   &trans   &trans   &trans   &trans                                                                  &trans   &trans        &trans      &trans    &trans      &trans
-                &trans   &trans   &trans   &trans   &trans   &cmt GRAVE T                                                            &trans   &trans        &trans      &trans    &trans      &kp LBKT
-                &trans   &trans   &trans   &trans   &trans   &trans                                                                  &trans   &cmt SQT J    &trans      &trans    &none       &trans
-                &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &trans      &trans   &trans   &trans   &trans   &cmt RBKT M   &kp COMMA   &kp DOT   &COMMA_RU   &DOT_RU
-                &trans   &trans   &trans   &trans   &trans                  &trans   &trans   &trans      &trans   &trans   &trans            &trans        &trans      &trans    &trans      &trans
+                &trans   &trans   &trans   &trans   &trans                                                                                       &trans        &trans      &trans    &trans      &trans
+                &trans   &trans   &trans   &trans   &trans   &trans                                                                     &trans   &trans        &trans      &trans    &trans      &trans
+                &trans   &trans   &trans   &trans   &trans   &cmt GRAVE T                                                               &trans   &trans        &trans      &trans    &trans      &kp LBKT
+                &trans   &trans   &trans   &trans   &trans   &trans                                                                     &trans   &cmt SQT J    &trans      &trans    &none       &trans
+                &trans   &trans   &trans   &trans   &trans   &trans         &trans   &trans   &trans      &trans   &trans   &WILDS_RU   &trans   &cmt RBKT M   &kp COMMA   &kp DOT   &COMMA_RU   &DOT_RU
+                &trans   &trans   &trans   &trans   &trans                  &trans   &trans   &trans      &trans   &trans   &trans               &trans        &trans      &trans    &trans      &trans
             >;
         };
 
